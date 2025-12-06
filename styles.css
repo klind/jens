@@ -1,0 +1,207 @@
+/* 
+ * Tømrer Jens Justesen - Custom Styles
+ * Companion to Tailwind CSS
+ * These styles can be extracted from index.html for better organization
+ */
+
+/* ============================================
+   FONTS
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* ============================================
+   SMOOTH SCROLLING
+   ============================================ */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================
+   HEADER EFFECTS
+   ============================================ */
+.header-shadow {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* ============================================
+   HAMBURGER MENU ANIMATION
+   ============================================ */
+.hamburger-line {
+    transition: all 0.3s ease;
+}
+
+.hamburger.active .line-1 {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active .line-2 {
+    opacity: 0;
+}
+
+.hamburger.active .line-3 {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ============================================
+   MOBILE MENU
+   ============================================ */
+.mobile-menu {
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+/* ============================================
+   BUTTON EFFECTS
+   ============================================ */
+.btn-primary {
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   GALLERY EFFECTS
+   ============================================ */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 75%; /* 4:3 aspect ratio */
+}
+
+.gallery-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   SERVICE CARD EFFECTS
+   ============================================ */
+.service-card {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================
+   CUSTOM SCROLLBAR (Webkit browsers)
+   ============================================ */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f8f9fa;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* ============================================
+   FOCUS STATES (Accessibility)
+   ============================================ */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid #27272a;
+    outline-offset: 2px;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.smooth-scroll {
+    scroll-behavior: smooth;
+}
+
+/* Ensure no horizontal scroll on mobile */
+body {
+    overflow-x: hidden;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+/* Mobile optimizations */
+@media (max-width: 767px) {
+    /* Larger touch targets on mobile */
+    button,
+    a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Tablet-specific styles if needed */
+}
+
+/* Desktop optimizations */
+@media (min-width: 1024px) {
+    /* Smoother animations on desktop (more powerful devices) */
+    .btn-primary,
+    .service-card,
+    .gallery-item img {
+        transition-duration: 0.2s;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1440px) {
+    /* Ensure content doesn't stretch too wide */
+    .max-w-7xl {
+        max-width: 1280px;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+    .no-print,
+    header,
+    footer,
+    nav,
+    .mobile-menu {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+        background: #fff;
+    }
+}
+

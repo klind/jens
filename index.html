@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tømrer Jens Justesen | Professionelt Håndværk på Fyn</title>
+    <meta name="description" content="Autoriseret tømrer i Langeskov med speciale i køkkenmontering, vinduer, døre og renovering. Erfaring siden 2002. Dækker hele Fyn.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ============================================
+           ACCENT COLOR CONFIGURATION
+           Change these values to update the entire site's accent color
+           ============================================ */
+        :root {
+            /* Emerald Green (current) */
+            --accent-main: #10b981;      /* emerald-600 */
+            --accent-hover: #34d399;     /* emerald-500 */
+            --accent-light: #6ee7b7;     /* emerald-400 */
+            --accent-dark: #059669;      /* emerald-700 */
+            
+            /* Uncomment below and comment above to switch to Blue */
+            /* --accent-main: #3b82f6;    */ /* blue-600 */
+            /* --accent-hover: #60a5fa;   */ /* blue-500 */
+            /* --accent-light: #93c5fd;   */ /* blue-400 */
+            /* --accent-dark: #2563eb;    */ /* blue-700 */
+            
+            /* Or use any custom color */
+            /* --accent-main: #your-color; */
+            /* --accent-hover: #your-hover-color; */
+            /* --accent-light: #your-light-color; */
+            /* --accent-dark: #your-dark-color; */
+        }
+        
+        /* Accent color utility classes */
+        .bg-accent { background-color: var(--accent-main); }
+        .bg-accent-hover:hover { background-color: var(--accent-hover); }
+        .text-accent { color: var(--accent-light); }
+        .border-accent { border-color: var(--accent-main); }
+        .border-accent-light { border-color: var(--accent-light); }
+        .ring-accent { --tw-ring-color: var(--accent-main); }
+        
+        * {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        
+        /* Sticky header shadow on scroll */
+        .header-shadow {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Hamburger menu animation */
+        .hamburger-line {
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger.active .line-1 {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+        
+        .hamburger.active .line-2 {
+            opacity: 0;
+        }
+        
+        .hamburger.active .line-3 {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+        
+        /* Mobile menu slide */
+        .mobile-menu {
+            transition: transform 0.3s ease;
+            transform: translateX(100%);
+        }
+        
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        
+        /* Smooth hover transitions */
+        .btn-primary {
+            transition: all 0.2s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Gallery grid */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 75%; /* 4:3 aspect ratio */
+        }
+        
+        .gallery-item img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Service card hover */
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f8f9fa;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sand: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            300: '#d6d3d1',
+                        },
+                        charcoal: {
+                            700: '#3f3f46',
+                            800: '#27272a',
+                            900: '#18181b',
+                        },
+                        dark: {
+                            950: '#0a0a0b',
+                            900: '#111113',
+                            850: '#1a1a1d',
+                            800: '#1f1f23',
+                            700: '#2a2a2f',
+                        }
+                    },
+                    spacing: {
+                        '18': '4.5rem',
+                        '22': '5.5rem',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="smooth-scroll bg-dark-900 text-gray-100 antialiased">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 bg-dark-850 border-b border-dark-700 z-50 transition-shadow duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20 lg:h-24">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3">
+                    <img src="images/logo.webp" alt="Tømrerfirmaet Jens Justesen" class="h-10 sm:h-12 w-auto">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#hjem" class="text-gray-300 hover:text-white transition-colors font-medium">Forside</a>
+                    <a href="#ydelser" class="text-gray-300 hover:text-white transition-colors font-medium">Ydelser</a>
+                    <a href="#projekter" class="text-gray-300 hover:text-white transition-colors font-medium">Projekter</a>
+                    <a href="#anmeldelser" class="text-gray-300 hover:text-white transition-colors font-medium">Anmeldelser</a>
+                </nav>
+
+                <!-- Desktop CTA -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="tel:28565867" class="text-gray-300 hover:text-white font-medium">2856 5867</a>
+                    <a href="#kontakt" class="btn-primary px-6 py-2.5 bg-accent border-2 border-accent text-white rounded-lg font-medium bg-accent-hover">
+                        Få tilbud
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <button id="hamburger" class="lg:hidden hamburger p-2 -mr-2">
+                    <div class="w-6 flex flex-col space-y-1.5">
+                        <span class="hamburger-line line-1 block w-full h-0.5 bg-gray-100"></span>
+                        <span class="hamburger-line line-2 block w-full h-0.5 bg-gray-100"></span>
+                        <span class="hamburger-line line-3 block w-full h-0.5 bg-gray-100"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu lg:hidden fixed top-0 right-0 bottom-0 w-full sm:w-80 bg-dark-850 shadow-2xl border-l border-dark-700">
+            <div class="flex flex-col h-full">
+                <div class="flex items-center justify-between p-6 border-b border-dark-700">
+                    <span class="font-semibold text-lg text-gray-100">Menu</span>
+                    <button id="close-menu" class="p-2 -mr-2 text-gray-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="flex flex-col p-6 space-y-6">
+                    <a href="#hjem" class="text-lg font-medium text-gray-100 hover:text-accent mobile-menu-link">Forside</a>
+                    <a href="#ydelser" class="text-lg font-medium text-gray-100 hover:text-accent mobile-menu-link">Ydelser</a>
+                    <a href="#projekter" class="text-lg font-medium text-gray-100 hover:text-accent mobile-menu-link">Projekter</a>
+                    <a href="#anmeldelser" class="text-lg font-medium text-gray-100 hover:text-accent mobile-menu-link">Anmeldelser</a>
+                    <div class="pt-6 border-t border-dark-700">
+                        <a href="tel:28565867" class="block text-lg font-medium text-gray-100 mb-4">📞 2856 5867</a>
+                        <a href="#kontakt" class="block w-full px-6 py-3 bg-accent text-white rounded-lg font-medium text-center mobile-menu-link bg-accent-hover">
+                            Få tilbud
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hjem" class="relative pt-20 lg:pt-24 min-h-[65vh] lg:min-h-[70vh] flex items-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="images/hero-kitchen-1.jpg" alt="Professionel køkkenmontering på Fyn" class="w-full h-full object-cover" loading="eager">
+            <div class="absolute inset-0 bg-gradient-to-r from-dark-950/95 via-dark-950/85 to-dark-950/70"></div>
+        </div>
+        
+        <!-- Content -->
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+            <div class="max-w-3xl">
+                <!-- Badge -->
+                <div class="inline-flex items-center space-x-2 px-4 py-2 bg-[var(--accent-main)]/10 backdrop-blur-sm rounded-full border border-[var(--accent-main)]/30 mb-6">
+                    <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-sm font-medium text-accent">Autoriseret køkkenmontør</span>
+                </div>
+                
+                <!-- Headline -->
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">
+                    Kvalitets­håndværk med<br>
+                    <span class="text-gray-300">dansk tradition</span>
+                </h1>
+                
+                <!-- Description -->
+                <p class="text-lg lg:text-xl text-gray-200 mb-10 leading-relaxed max-w-2xl">
+                    Professionel tømrer i Langeskov siden 2002. Vi leverer præcist håndværk til private og erhverv på hele Fyn – fra køkkenmontering til totalrenoveringer.
+                </p>
+                
+                <!-- CTAs -->
+                <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                    <a href="#kontakt" class="btn-primary inline-flex items-center justify-center px-8 py-4 bg-accent text-white rounded-lg font-semibold text-lg bg-accent-hover shadow-lg shadow-[var(--accent-main)]/20">
+                        Få et gratis tilbud
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                    <a href="tel:28565867" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/20 text-white rounded-lg font-semibold text-lg hover:bg-white/20 hover:border-[var(--accent-hover)] transition-colors">
+                        <svg class="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                        Ring nu
+                    </a>
+                </div>
+                
+                <!-- Trust Badges -->
+                <div class="grid grid-cols-3 gap-6 max-w-xl">
+                    <div class="text-center lg:text-left">
+                        <div class="text-3xl lg:text-4xl font-bold text-white mb-1">20+</div>
+                        <div class="text-sm text-gray-300">års erfaring</div>
+                    </div>
+                    <div class="text-center lg:text-left border-l border-r border-white/10 px-4">
+                        <div class="text-3xl lg:text-4xl font-bold text-white mb-1">500+</div>
+                        <div class="text-sm text-gray-300">projekter</div>
+                    </div>
+                    <div class="text-center lg:text-left">
+                        <div class="text-3xl lg:text-4xl font-bold text-white mb-1">5.0</div>
+                        <div class="text-sm text-gray-300">★★★★★</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Floating Info Card (Desktop Only) -->
+            <div class="absolute bottom-8 right-8 bg-dark-850/90 backdrop-blur-md border border-dark-700 rounded-xl shadow-2xl p-6 max-w-xs hidden xl:block">
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-[var(--accent-main)]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-white mb-1">Dækker hele Fyn</div>
+                        <div class="text-sm text-gray-300">Odense, Kerteminde, Nyborg, Ullerslev & omegn</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="ydelser" class="py-16 lg:py-24 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="max-w-3xl mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">
+                    Vores ydelser
+                </h2>
+                <p class="text-lg text-gray-300">
+                    Vi sætter en ære i professionelt håndværk med en flot finish. Fra køkkenmontering til totalrenoveringer – vi klarer det hele med omhu og præcision.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                
+                <!-- Service Card 1 -->
+                <div class="service-card bg-dark-850 border border-dark-700 rounded-2xl p-8 hover:border-[var(--accent-main)]/50">
+                    <div class="w-14 h-14 bg-[var(--accent-main)]/20 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3zM14 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1h-4a1 1 0 01-1-1v-3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Køkkenmontering</h3>
+                    <p class="text-gray-300 mb-4">
+                        Autoriseret montør af HTH, Unoform, Invita, Svane, IKEA og flere. Komplet rådgivning og installation af dit drømmekøkken.
+                    </p>
+                    <a href="#kontakt" class="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
+                        Kontakt os
+                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card bg-dark-850 border border-dark-700 rounded-2xl p-8 hover:border-[var(--accent-main)]/50">
+                    <div class="w-14 h-14 bg-[var(--accent-main)]/20 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12M8 12h12M8 17h12M3 7h.01M3 12h.01M3 17h.01"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Vinduer & Døre</h3>
+                    <p class="text-gray-300 mb-4">
+                        Professionel montering af vinduer og døre. Vi rådgiver om de bedste løsninger fra producenter som STM, Rationel og Velfac.
+                    </p>
+                    <a href="#kontakt" class="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
+                        Kontakt os
+                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card bg-dark-850 border border-dark-700 rounded-2xl p-8 hover:border-[var(--accent-main)]/50">
+                    <div class="w-14 h-14 bg-[var(--accent-main)]/20 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Renovering & Ombygning</h3>
+                    <p class="text-gray-300 mb-4">
+                        Fra mindre renoveringer til totalrenoveringer. Vi finder den bedste løsning uden at gå på kompromis med kvaliteten.
+                    </p>
+                    <a href="#kontakt" class="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
+                        Kontakt os
+                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-card bg-dark-850 border border-dark-700 rounded-2xl p-8 hover:border-[var(--accent-main)]/50">
+                    <div class="w-14 h-14 bg-[var(--accent-main)]/20 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Nyt Tag</h3>
+                    <p class="text-gray-300 mb-4">
+                        Montering af nyt tag eller tagrenovering. Vi hjælper dig med at finde den rigtige løsning til dit hjem.
+                    </p>
+                    <a href="#kontakt" class="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
+                        Kontakt os
+                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="service-card bg-dark-850 border border-dark-700 rounded-2xl p-8 hover:border-[var(--accent-main)]/50">
+                    <div class="w-14 h-14 bg-[var(--accent-main)]/20 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Gulvlægning</h3>
+                    <p class="text-gray-300 mb-4">
+                        Installation af trægulve samt professionel gulvafslibning. Vi sørger for et flot og holdbart resultat.
+                    </p>
+                    <a href="#kontakt" class="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
+                        Kontakt os
+                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="service-card bg-dark-850 border border-dark-700 rounded-2xl p-8 hover:border-[var(--accent-main)]/50">
+                    <div class="w-14 h-14 bg-[var(--accent-main)]/20 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-3">Øvrige Opgaver</h3>
+                    <p class="text-gray-300 mb-4">
+                        Ingen opgave er for stor eller lille. Kontakt os for rådgivning – vi finder altid en løsning.
+                    </p>
+                    <a href="#kontakt" class="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
+                        Kontakt os
+                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 lg:py-24 bg-dark-850">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Content -->
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+                        Hvorfor vælge os?
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Hos Tømrerfirmaet Jens Justesen sætter vi kunden i centrum. Vi er med hele vejen fra start til slut og sikrer klar kommunikation gennem hele forløbet.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-[var(--accent-main)]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-white mb-1">Tæt dialog med tømrermesteren</h3>
+                                <p class="text-gray-300">Du kommunikerer direkte med mig gennem hele projektet – ingen mellemmænd.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-[var(--accent-main)]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-white mb-1">Præcise tidsfrister</h3>
+                                <p class="text-gray-300">Vi overholder alle aftaler og tidsplaner. Dit projekt bliver færdigt til tiden.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-[var(--accent-main)]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-white mb-1">Rent og pænt</h3>
+                                <p class="text-gray-300">Vi rydder op efter os selv – altid rent når vi forlader arbejdspladsen.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-[var(--accent-main)]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-white mb-1">Konkurrencedygtige priser</h3>
+                                <p class="text-gray-300">Fair priser uden skjulte omkostninger. Du får altid et klart tilbud på forhånd.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="order-first lg:order-last">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-gray-100">
+                        <img src="images/hero-bathroom.jpg" alt="Kvalitetshåndværk fra tømrer i Langeskov" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio/Gallery Section -->
+    <section id="projekter" class="py-16 lg:py-24 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-12">
+                <div class="max-w-2xl mb-6 sm:mb-0">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">
+                        Udvalgte projekter
+                    </h2>
+                    <p class="text-lg text-gray-300">
+                        Se eksempler på vores arbejde – fra elegante køkkener til omfattende renoveringer.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg">
+                    <img src="images/service-kitchen.jpg" alt="Køkkenmontering - HTH, Unoform, IKEA" loading="lazy">
+                </div>
+
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg">
+                    <img src="images/hero-kitchen-3.jpg" alt="Professionel køkkenrenovering på Fyn" loading="lazy">
+                </div>
+
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg">
+                    <img src="images/service-windows.jpg" alt="Montering af vinduer og døre" loading="lazy">
+                </div>
+
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg">
+                    <img src="images/hero-bathroom.jpg" alt="Badeværelsesrenovering og ombygning" loading="lazy">
+                </div>
+
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg">
+                    <img src="images/service-roof.jpg" alt="Nyt tag og tagrenovering" loading="lazy">
+                </div>
+
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg">
+                    <img src="images/service-van.jpg" alt="Tømrerfirma på Fyn - professionelt håndværk" loading="lazy">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="anmeldelser" class="py-16 lg:py-24 bg-dark-850">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">
+                    Hvad vores kunder siger
+                </h2>
+                <p class="text-lg text-gray-300">
+                    Vi lever af tilfredse og tilbagevendende kunder
+                </p>
+                <div class="flex items-center justify-center mt-6 space-x-2">
+                    <div class="flex text-yellow-400">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <span class="text-lg font-semibold text-white">5.0</span>
+                    <span class="text-gray-400">· 5 anmeldelser</span>
+                </div>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Testimonial 1 -->
+                <div class="bg-dark-900 border border-dark-700 rounded-2xl p-8">
+                    <div class="flex text-yellow-400 mb-4">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        "Når jeg sælger køkken, bad og garderobe, har jeg ofte brugt Jens som montør. Det er en stor fornøjelse at have ham på mine sager, tingene bliver udført præcist og med fokus på detaljer."
+                    </p>
+                    <div>
+                        <div class="font-semibold text-white">Jakob Baunsgaard Nielsen</div>
+                        <div class="text-sm text-gray-400">Erhvervskonsulent, HTH Håndværkssalg</div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-dark-900 border border-dark-700 rounded-2xl p-8">
+                    <div class="flex text-yellow-400 mb-4">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        "Professionelt arbejde fra start til slut. Jens var god til at kommunikere og holde os opdateret. Vores nye køkken blev monteret perfekt og vi er super tilfredse."
+                    </p>
+                    <div>
+                        <div class="font-semibold text-white">Maria & Thomas</div>
+                        <div class="text-sm text-gray-400">Privatkunde, Odense</div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-dark-900 border border-dark-700 rounded-2xl p-8">
+                    <div class="flex text-yellow-400 mb-4">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        "Flot håndværk og god service. Jens samarbejder godt med andre håndværkere og sikrer altid at arbejdet bliver færdigt til tiden. Kan varmt anbefales!"
+                    </p>
+                    <div>
+                        <div class="font-semibold text-white">Henrik Nielsen</div>
+                        <div class="text-sm text-gray-400">Privatkunde, Ullerslev</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontakt" class="py-16 lg:py-24 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+                
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+                        Få et uforpligtende tilbud
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Har du spørgsmål eller ønsker du et gratis tilbud? Kontakt os i dag, så finder vi sammen den bedste løsning på din opgave.
+                    </p>
+                    
+                    <div class="space-y-6 mb-12">
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-[var(--accent-main)]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="text-sm font-medium text-gray-400 mb-1">Telefon</div>
+                                <a href="tel:28565867" class="text-xl font-semibold text-white hover:text-accent">2856 5867</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-[var(--accent-main)]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="text-sm font-medium text-gray-400 mb-1">Email</div>
+                                <a href="mailto:jens@toemrerjustesen.dk" class="text-xl font-semibold text-white hover:text-accent break-all">jens@toemrerjustesen.dk</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-[var(--accent-main)]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="text-sm font-medium text-gray-400 mb-1">Område</div>
+                                <div class="text-lg text-gray-200">Langeskov, Odense, Kerteminde, Nyborg, Ullerslev & hele Fyn</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Business Info -->
+                    <div class="pt-8 border-t border-dark-700">
+                        <h3 class="font-semibold text-white mb-4">Tømrerfirmaet Jens Justesen ApS</h3>
+                        <div class="space-y-2 text-gray-300">
+                            <p>CVR: [Insert CVR]</p>
+                            <p>Erfaring siden 2002</p>
+                            <p>Autoriseret køkkenmontør</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-dark-850 border border-dark-700 rounded-2xl p-8 lg:p-10">
+                    <h3 class="text-2xl font-bold text-white mb-6">Vil du ringes op?</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">
+                                Navn *
+                            </label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                required
+                                class="w-full px-4 py-3 bg-dark-900 border border-dark-700 text-gray-100 rounded-lg focus:ring-2 ring-accent focus:border-transparent outline-none transition-all placeholder:text-gray-500"
+                                placeholder="Dit fulde navn"
+                            >
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
+                                Telefon *
+                            </label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                required
+                                class="w-full px-4 py-3 bg-dark-900 border border-dark-700 text-gray-100 rounded-lg focus:ring-2 ring-accent focus:border-transparent outline-none transition-all placeholder:text-gray-500"
+                                placeholder="Dit telefonnummer"
+                            >
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                                Email (valgfri)
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email"
+                                class="w-full px-4 py-3 bg-dark-900 border border-dark-700 text-gray-100 rounded-lg focus:ring-2 ring-accent focus:border-transparent outline-none transition-all placeholder:text-gray-500"
+                                placeholder="din@email.dk"
+                            >
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+                                Besked (valgfri)
+                            </label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="4"
+                                class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-charcoal-800 focus:border-transparent outline-none transition-all resize-none"
+                                placeholder="Fortæl kort om dit projekt..."
+                            ></textarea>
+                        </div>
+
+                        <button 
+                            type="submit"
+                            class="w-full btn-primary px-8 py-4 bg-accent text-white rounded-lg font-semibold text-lg bg-accent-hover"
+                        >
+                            Ja tak, ring mig op!
+                        </button>
+
+                        <p class="text-sm text-gray-400 text-center">
+                            Vi kontakter dig hurtigst muligt – typisk samme dag
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal-900 text-white py-12 lg:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+                
+                <!-- Company Info -->
+                <div class="lg:col-span-2">
+                    <div class="mb-6">
+                        <img src="images/logo.webp" alt="Tømrerfirmaet Jens Justesen" class="h-12 w-auto mb-2">
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        Professionelt tømrer- og snedkerarbejde på Fyn siden 2002. Specialister i køkkenmontering, vinduer, døre og totalrenoveringer.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/jensjustesentoemrer/" target="_blank" rel="noopener" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Hurtige links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#hjem" class="text-gray-300 hover:text-white transition-colors">Forside</a></li>
+                        <li><a href="#ydelser" class="text-gray-300 hover:text-white transition-colors">Ydelser</a></li>
+                        <li><a href="#projekter" class="text-gray-300 hover:text-white transition-colors">Projekter</a></li>
+                        <li><a href="#anmeldelser" class="text-gray-300 hover:text-white transition-colors">Anmeldelser</a></li>
+                        <li><a href="#kontakt" class="text-gray-300 hover:text-white transition-colors">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Kontakt</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li>
+                            <a href="tel:28565867" class="hover:text-white transition-colors">
+                                📞 2856 5867
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:jens@toemrerjustesen.dk" class="hover:text-white transition-colors break-all">
+                                ✉️ jens@toemrerjustesen.dk
+                            </a>
+                        </li>
+                        <li class="pt-2">
+                            📍 Dækker hele Fyn
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-8 border-t border-white/10">
+                <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+                    <div class="text-sm text-gray-400">
+                        © 2024 Tømrerfirmaet Jens Justesen ApS. Alle rettigheder forbeholdes.
+                    </div>
+                    <div class="flex space-x-6 text-sm text-gray-400">
+                        <a href="#" class="hover:text-white transition-colors">Privatlivspolitik</a>
+                        <a href="#" class="hover:text-white transition-colors">Cookiepolitik</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Header shadow on scroll
+        const header = document.getElementById('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 50) {
+                header.classList.add('header-shadow');
+            } else {
+                header.classList.remove('header-shadow');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('active');
+            hamburger.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        hamburger.addEventListener('click', openMobileMenu);
+        closeMenu.addEventListener('click', closeMobileMenu);
+        
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const offsetTop = target.offsetTop - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Form submission (placeholder - integrate with actual backend)
+        const forms = document.querySelectorAll('form');
+        forms.forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Tak for din henvendelse! Vi kontakter dig hurtigst muligt.');
+                form.reset();
+            });
+        });
+    </script>
+
+</body>
+</html>
+
