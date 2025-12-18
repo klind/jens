@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Prevent flicker on page load -->
+    <style>
+        .preload, .preload * {
+            transition: none !important;
+            animation: none !important;
+        }
+    </style>
+    
+    <title>Renovering & Ombygning Odense | Totalrenovering Langeskov | Tømrer Fyn</title>
+    <meta name="description" content="Totalrenovering og ombygning i Odense og Langeskov. Erfaren tømrer på Fyn med 20+ års erfaring. Alt fra mindre renoveringer til store ombygninger. Ring 2856 5867.">
+    <link rel="canonical" href="https://toemrerjustesen.dk/renovering-ombygning.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Renovering",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Tømrerfirmaet Jens Justesen ApS",
+        "telephone": "+4528565867"
+      },
+      "areaServed": ["Langeskov", "Odense", "Kerteminde", "Nyborg", "Ullerslev", "Fyn"]
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --accent-main: #10b981; --accent-hover: #34d399; }
+        .bg-accent { background-color: var(--accent-main); }
+        .bg-accent-hover:hover { background-color: var(--accent-hover); }
+        .text-accent { color: #6ee7b7; }
+        * { font-family: 'Inter', sans-serif; }
+        .btn-primary { transition: all 0.2s ease; }
+        .btn-primary:hover { transform: translateY(-1px); }
+        
+        /* Mobile menu */
+        .mobile-menu {
+            transition: transform 0.3s ease, visibility 0s 0.3s;
+            transform: translateX(100%);
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+            visibility: visible;
+            pointer-events: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        /* Prevent transitions on page load */
+        .preload * {
+            transition: none !important;
+        }
+        
+        /* Hamburger */
+        .hamburger-line { transition: all 0.3s ease; }
+        .hamburger.active .line-1 { transform: translateY(8px) rotate(45deg); }
+        .hamburger.active .line-2 { opacity: 0; }
+        .hamburger.active .line-3 { transform: translateY(-8px) rotate(-45deg); }
+    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { dark: { 950: '#0a0a0b', 900: '#111113', 850: '#1a1a1d', 700: '#2a2a2f' }, charcoal: { 900: '#18181b' } }}}}
+    </script>
+</head>
+<body class="preload bg-dark-900 text-gray-100">
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.remove('preload');
+        });
+        setTimeout(() => {
+            document.body.classList.remove('preload');
+        }, 100);
+    </script>
+    <!-- Header Component -->
+    <div id="header-placeholder"></div>
+
+    <section class="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-dark-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl lg:text-6xl font-bold text-white mb-6">Renovering & Ombygning i Odense og Langeskov</h1>
+            <p class="text-xl text-gray-300 mb-8">Fra mindre renoveringer til totalrenoveringer og store ombygninger på hele Fyn. Erfaren håndværker med 20+ års erfaring.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#kontakt" class="px-8 py-4 bg-accent border-2 border-accent text-white rounded-lg font-semibold bg-accent-hover">Kontakt os</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-dark-850">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white mb-6">Professionel renovering og ombygning på Fyn</h2>
+            <p class="text-gray-300 mb-6">
+                Har du brug for at renovere din bolig eller ønsker du at bygge om? Som erfaren tømrer i Langeskov og Odense tilbyder vi alt fra mindre renoveringsprojekter til store totalrenoveringer og ombygninger. Vi sikrer altid høj kvalitet, præcise tidsfrister og god kommunikation gennem hele forløbet.
+            </p>
+
+            <h2 class="text-3xl font-bold text-white mb-6 mt-12">Vores renoveringsydelser</h2>
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-dark-900 border border-dark-700 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-white mb-3">Mindre renoveringer</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Delrenovering af rum</li>
+                        <li>• Udskiftning af lister</li>
+                        <li>• Malerarbejde</li>
+                        <li>• Reparationer</li>
+                    </ul>
+                </div>
+                <div class="bg-dark-900 border border-dark-700 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-white mb-3">Totalrenovering</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Komplet renovering af bolig</li>
+                        <li>• Nyt køkken og badeværelse</li>
+                        <li>• Nye gulve</li>
+                        <li>• El og VVS koordinering</li>
+                    </ul>
+                </div>
+                <div class="bg-dark-900 border border-dark-700 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-white mb-3">Ombygning</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Flytning/fjernelse af vægge</li>
+                        <li>• Ny rumindeling</li>
+                        <li>• Tilbygning</li>
+                        <li>• Loftsetage</li>
+                    </ul>
+                </div>
+                <div class="bg-dark-900 border border-dark-700 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-white mb-3">Badeværelse</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Komplet badeværelsesrenovering</li>
+                        <li>• Fliser og klinker</li>
+                        <li>• Membran og afløb</li>
+                        <li>• Koordinering med VVS</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold text-white mb-6 mt-12">Hvorfor vælge os til din renovering?</h2>
+            <div class="space-y-6 mb-8">
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-white mb-1">Én kontaktperson</h3>
+                        <p class="text-gray-300">Du kommunikerer direkte med tømrermesteren - ingen mellemmænd. Vi koordinerer alle håndværkere.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-white mb-1">Fast pris og tidsplan</h3>
+                        <p class="text-gray-300">Du får et klart tilbud med fast pris og præcis tidsplan. Ingen overraskelser.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-white mb-1">Kvalitet i hvert detalje</h3>
+                        <p class="text-gray-300">20+ års erfaring med renovering sikrer det bedste resultat - hver gang.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold text-white mb-6 mt-12">Serviceområde</h2>
+            <p class="text-gray-300 mb-6">Vi udfører renovering og ombygning i hele Fyn-området:</p>
+            <div class="grid sm:grid-cols-2 gap-4 text-gray-300">
+                <ul class="space-y-2">
+                    <li>• Renovering Langeskov</li>
+                    <li>• Renovering Odense</li>
+                    <li>• Totalrenovering Kerteminde</li>
+                    <li>• Ombygning Nyborg</li>
+                </ul>
+                <ul class="space-y-2">
+                    <li>• Renovering Ullerslev</li>
+                    <li>• Renovering Munkebo</li>
+                    <li>• Ombygning Ørbæk</li>
+                    <li>• Håndværker hele Fyn</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-dark-900 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">Klar til at renovere?</h2>
+            <p class="text-xl text-gray-300 mb-8">Kontakt os for et gratis og uforpligtende tilbud på din renovering</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#kontakt" class="px-8 py-4 bg-accent border-2 border-accent text-white rounded-lg font-semibold bg-accent-hover">Kontakt os</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Component Loader -->
+    <script src="components/loader.js"></script>
+
+</body>
+</html>
+

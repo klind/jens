@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Prevent flicker on page load -->
+    <style>
+        .preload, .preload * {
+            transition: none !important;
+            animation: none !important;
+        }
+    </style>
+    
+    <title>Gulvlægning Odense | Trægulve Langeskov | Gulvafslibning Fyn | Tømrer</title>
+    <meta name="description" content="Professionel gulvlægning i Odense og på Fyn. Erfaren tømrer lægger trægulve og udfører gulvafslibning. 20+ års erfaring. Ring 2856 5867 for gratis tilbud.">
+    <link rel="canonical" href="https://toemrerjustesen.dk/gulvlaegning.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Gulvlægning",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Tømrerfirmaet Jens Justesen ApS",
+        "telephone": "+4528565867"
+      },
+      "areaServed": ["Langeskov", "Odense", "Kerteminde", "Nyborg", "Ullerslev", "Fyn"]
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --accent-main: #10b981; --accent-hover: #34d399; }
+        .bg-accent { background-color: var(--accent-main); }
+        .bg-accent-hover:hover { background-color: var(--accent-hover); }
+        .text-accent { color: #6ee7b7; }
+        * { font-family: 'Inter', sans-serif; }
+        .btn-primary { transition: all 0.2s ease; }
+        .btn-primary:hover { transform: translateY(-1px); }
+        
+        /* Mobile menu */
+        .mobile-menu {
+            transition: transform 0.3s ease, visibility 0s 0.3s;
+            transform: translateX(100%);
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+            visibility: visible;
+            pointer-events: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        /* Prevent transitions on page load */
+        .preload * {
+            transition: none !important;
+        }
+        
+        /* Hamburger */
+        .hamburger-line { transition: all 0.3s ease; }
+        .hamburger.active .line-1 { transform: translateY(8px) rotate(45deg); }
+        .hamburger.active .line-2 { opacity: 0; }
+        .hamburger.active .line-3 { transform: translateY(-8px) rotate(-45deg); }
+    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { dark: { 950: '#0a0a0b', 900: '#111113', 850: '#1a1a1d', 700: '#2a2a2f' }, charcoal: { 900: '#18181b' } }}}}
+    </script>
+</head>
+<body class="preload bg-dark-900 text-gray-100">
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.remove('preload');
+        });
+        setTimeout(() => {
+            document.body.classList.remove('preload');
+        }, 100);
+    </script>
+    <!-- Header Component -->
+    <div id="header-placeholder"></div>
+
+    <section class="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-dark-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl lg:text-6xl font-bold text-white mb-6">Gulvlægning i Odense og på Fyn</h1>
+            <p class="text-xl text-gray-300 mb-8">Professionel lægning af trægulve og gulvafslibning. Erfaren tømrer med 20+ års erfaring i Langeskov, Odense og hele Fyn.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#kontakt" class="px-8 py-4 bg-accent border-2 border-accent text-white rounded-lg font-semibold bg-accent-hover">Kontakt os</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-dark-850">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white mb-6">Erfaren tømrer til gulvlægning på Fyn</h2>
+            <p class="text-gray-300 mb-6">
+                Et nyt gulv kan transformere dit hjem. Som erfaren tømrer i Langeskov og Odense har vi specialiseret os i professionel gulvlægning og gulvafslibning. Vi arbejder med alle typer trægulve og sikrer et flot og holdbart resultat med kvalitetshåndværk i hver detalje.
+            </p>
+
+            <h2 class="text-3xl font-bold text-white mb-6 mt-12">Vores gulvydelser</h2>
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-dark-900 border border-dark-700 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-white mb-3">Trægulve</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Lægning af plankegulve</li>
+                        <li>• Parketgulve</li>
+                        <li>• Laminatgulve</li>
+                        <li>• Rådhusparket</li>
+                    </ul>
+                </div>
+                <div class="bg-dark-900 border border-dark-700 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-white mb-3">Gulvafslibning</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Professionel afslibning</li>
+                        <li>• Lakering og oliebehandling</li>
+                        <li>• Renovering af gamle gulve</li>
+                        <li>• Udjævning af ujævne gulve</li>
+                    </ul>
+                </div>
+                <div class="bg-dark-900 border border-dark-700 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-white mb-3">Gulvreparation</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Udskiftning af brædder</li>
+                        <li>• Reparation af vandskader</li>
+                        <li>• Knagende gulve</li>
+                        <li>• Fugemasse og spartelmasse</li>
+                    </ul>
+                </div>
+                <div class="bg-dark-900 border border-dark-700 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-white mb-3">Undergulv</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Udlægning af undergulv</li>
+                        <li>• Isolering og dampspærre</li>
+                        <li>• Udjævning af betongulve</li>
+                        <li>• Gulvvarme forberedelse</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold text-white mb-6 mt-12">Hvorfor vælge os til gulvlægning?</h2>
+            <div class="space-y-6 mb-8">
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-white mb-1">Håndværksmæssig kvalitet</h3>
+                        <p class="text-gray-300">20+ års erfaring med gulvlægning sikrer det bedste resultat hver gang.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-white mb-1">Flot finish</h3>
+                        <p class="text-gray-300">Vi går ikke på kompromis med kvaliteten. Alle detaljer skal være perfekte.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-white mb-1">Rådgivning inkluderet</h3>
+                        <p class="text-gray-300">Vi hjælper dig med at vælge det rigtige gulv til dit hjem og budget.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold text-white mb-6 mt-12">Serviceområde</h2>
+            <p class="text-gray-300 mb-6">Vi udfører gulvlægning i hele Fyn-området:</p>
+            <div class="grid sm:grid-cols-2 gap-4 text-gray-300">
+                <ul class="space-y-2">
+                    <li>• Gulvlægning Langeskov</li>
+                    <li>• Gulvlægning Odense</li>
+                    <li>• Trægulve Kerteminde</li>
+                    <li>• Gulvafslibning Nyborg</li>
+                </ul>
+                <ul class="space-y-2">
+                    <li>• Gulvlægning Ullerslev</li>
+                    <li>• Gulvlægning Munkebo</li>
+                    <li>• Gulvafslibning Ørbæk</li>
+                    <li>• Håndværker hele Fyn</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-dark-900 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">Klar til nyt gulv?</h2>
+            <p class="text-xl text-gray-300 mb-8">Kontakt os for et gratis og uforpligtende tilbud på gulvlægning</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#kontakt" class="px-8 py-4 bg-accent border-2 border-accent text-white rounded-lg font-semibold bg-accent-hover">Kontakt os</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Component Loader -->
+    <script src="components/loader.js"></script>
+
+</body>
+</html>
+

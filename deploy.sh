@@ -39,8 +39,12 @@ aws s3 sync . s3://$S3_BUCKET \
     --include 'index.html' \
     --include 'styles.css' \
     --include 'script.js' \
+    --include '*.html' \
+    --include 'robots.txt' \
+    --include 'sitemap.xml' \
     --include 'BingSiteAuth.xml' \
     --include 'images/*' \
+    --include 'components/*' \
     --delete
 
 if [ $? -eq 0 ]; then

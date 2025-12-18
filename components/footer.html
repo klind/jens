@@ -1,0 +1,132 @@
+<footer class="bg-charcoal-900 text-white py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+            
+            <!-- Company Info -->
+            <div class="lg:col-span-2">
+                <div class="mb-6">
+                    <img src="images/logo.png" alt="Tømrerfirmaet Jens Justesen" class="h-24 w-auto mb-2">
+                </div>
+                <p class="text-gray-300 mb-6 max-w-md">
+                    Professionelt tømrer- og snedkerarbejde i Langeskov, Odense og hele Fyn siden 2002. Autoriseret køkkenmontør og certificeret håndværker - specialister i køkkenmontering, vinduer, døre og totalrenoveringer.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.facebook.com/jensjustesentoemrer/" target="_blank" rel="noopener" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="font-semibold text-lg mb-4">Hurtige links</h3>
+                <ul class="space-y-3">
+                    <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Forside</a></li>
+                    <li><a href="index.html#ydelser" class="text-gray-300 hover:text-white transition-colors">Ydelser</a></li>
+                    <li><a href="index.html#projekter" class="text-gray-300 hover:text-white transition-colors">Projekter</a></li>
+                    <li><a href="index.html#anmeldelser" class="text-gray-300 hover:text-white transition-colors">Anmeldelser</a></li>
+                    <li><a href="index.html#kontakt" class="text-gray-300 hover:text-white transition-colors">Kontakt</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+                <h3 class="font-semibold text-lg mb-4">Kontakt</h3>
+                <ul class="space-y-3 text-gray-300">
+                    <li>
+                        <a href="tel:28565867" class="hover:text-white transition-colors">
+                            📞 2856 5867
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:jens@toemrerjustesen.dk" class="hover:text-white transition-colors break-all">
+                            ✉️ jens@toemrerjustesen.dk
+                        </a>
+                    </li>
+                    <li class="pt-2">
+                        📍 Langeskov | Odense | Kerteminde | Nyborg | Ullerslev | Munkebo | Ørbæk
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="pt-8 border-t border-white/10">
+            <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+                <div class="text-sm text-gray-400">
+                    © 2024 Tømrerfirmaet Jens Justesen ApS. Alle rettigheder forbeholdes.
+                </div>
+                <div class="flex space-x-6 text-sm text-gray-400">
+                    <a href="#" class="hover:text-white transition-colors">Privatlivspolitik</a>
+                    <a href="#" class="hover:text-white transition-colors">Cookiepolitik</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+<script>
+    // Header shadow on scroll
+    const header = document.getElementById('header');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > 50) {
+            header.style.boxShadow = '0 10px 30px rgba(0,0,0,0.3)';
+        } else {
+            header.style.boxShadow = 'none';
+        }
+
+        lastScroll = currentScroll;
+    });
+
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenu = document.getElementById('close-menu');
+    const menuLinks = document.querySelectorAll('.mobile-menu-link');
+    
+    const mobileYdelserToggle = document.getElementById('mobile-ydelser-toggle');
+    const mobileYdelserMenu = document.getElementById('mobile-ydelser-menu');
+    const mobileYdelserArrow = document.getElementById('mobile-ydelser-arrow');
+
+    hamburger?.addEventListener('click', () => {
+        mobileMenu.classList.add('active');
+        hamburger.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    closeMenu?.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Mobile Ydelser dropdown toggle
+    mobileYdelserToggle?.addEventListener('click', () => {
+        const isHidden = mobileYdelserMenu.classList.contains('hidden');
+        if (isHidden) {
+            mobileYdelserMenu.classList.remove('hidden');
+            mobileYdelserArrow.style.transform = 'rotate(180deg)';
+        } else {
+            mobileYdelserMenu.classList.add('hidden');
+            mobileYdelserArrow.style.transform = 'rotate(0deg)';
+        }
+    });
+</script>
+

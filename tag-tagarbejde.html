@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Prevent flicker on page load -->
+    <style>
+        .preload, .preload * {
+            transition: none !important;
+            animation: none !important;
+        }
+    </style>
+    
+    <title>Tagarbejde Fyn | Nyt Tag Odense | Tagrenovering Langeskov | Tømrer</title>
+    <meta name="description" content="Professionelt tagarbejde på Fyn. Nyt tag, tagrenovering og tagreparation i Odense, Langeskov og omegn. Erfaren tømrer. Ring 2856 5867 for gratis tilbud.">
+    <link rel="canonical" href="https://toemrerjustesen.dk/tag-tagarbejde.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Tagarbejde",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Tømrerfirmaet Jens Justesen ApS",
+        "telephone": "+4528565867"
+      },
+      "areaServed": ["Langeskov", "Odense", "Kerteminde", "Nyborg", "Ullerslev", "Fyn"]
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --accent-main: #10b981; --accent-hover: #34d399; }
+        .bg-accent { background-color: var(--accent-main); }
+        .bg-accent-hover:hover { background-color: var(--accent-hover); }
+        .text-accent { color: #6ee7b7; }
+        * { font-family: 'Inter', sans-serif; }
+        .btn-primary { transition: all 0.2s ease; }
+        .btn-primary:hover { transform: translateY(-1px); }
+        
+        /* Mobile menu */
+        .mobile-menu {
+            transition: transform 0.3s ease, visibility 0s 0.3s;
+            transform: translateX(100%);
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+            visibility: visible;
+            pointer-events: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        /* Prevent transitions on page load */
+        .preload * {
+            transition: none !important;
+        }
+        
+        /* Hamburger */
+        .hamburger-line { transition: all 0.3s ease; }
+        .hamburger.active .line-1 { transform: translateY(8px) rotate(45deg); }
+        .hamburger.active .line-2 { opacity: 0; }
+        .hamburger.active .line-3 { transform: translateY(-8px) rotate(-45deg); }
+    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { dark: { 950: '#0a0a0b', 900: '#111113', 850: '#1a1a1d', 700: '#2a2a2f' }, charcoal: { 900: '#18181b' } }}}}
+    </script>
+</head>
+<body class="preload bg-dark-900 text-gray-100">
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.remove('preload');
+        });
+        setTimeout(() => {
+            document.body.classList.remove('preload');
+        }, 100);
+    </script>
+    <!-- Header Component -->
+    <div id="header-placeholder"></div>
+
+    <section class="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-dark-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl lg:text-6xl font-bold text-white mb-6">Tagarbejde og Nyt Tag på Fyn</h1>
+            <p class="text-xl text-gray-300 mb-8">Professionel montering af nyt tag og tagrenovering i Odense, Langeskov og hele Fyn. Erfaren tømrer med 20+ års erfaring.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#kontakt" class="px-8 py-4 bg-accent border-2 border-accent text-white rounded-lg font-semibold bg-accent-hover">Kontakt os</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-dark-850">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white mb-6">Erfaren tømrer til tagarbejde på Fyn</h2>
+            <p class="text-gray-300 mb-6">
+                Dit tag er en af de vigtigste dele af dit hus. Som erfaren tømrer i Langeskov og Odense har vi specialiseret os i tagarbejde - fra montering af nyt tag til tagrenovering og reparation af tagkonstruktioner. Vi sikrer at dit tag bliver monteret korrekt og holder i mange år fremover.
+            </p>
+
+            <h2 class="text-3xl font-bold text-white mb-6 mt-12">Vores tagydelser</h2>
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-dark-900 border border-dark-700 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-white mb-3">Nyt tag</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Montering af tagkonstruktion</li>
+                        <li>• Tagpap og undertag</li>
+                        <li>• Montering af tegl eller eternit</li>
+                        <li>• Rådgivning om tagmaterialer</li>
+                    </ul>
+                </div>
+                <div class="bg-dark-900 border border-dark-700 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-white mb-3">Tagrenovering</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Udskiftning af gamle tage</li>
+                        <li>• Forbedret isolering</li>
+                        <li>• Renovering af tagkonstruktion</li>
+                        <li>• Håndtering af forsikringssager</li>
+                    </ul>
+                </div>
+                <div class="bg-dark-900 border border-dark-700 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-white mb-3">Tagreparation</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Akut tagreparation</li>
+                        <li>• Udskiftning af tagsten</li>
+                        <li>• Reparation af lækage</li>
+                        <li>• Fugning og tætning</li>
+                    </ul>
+                </div>
+                <div class="bg-dark-900 border border-dark-700 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-white mb-3">Tagvinduer</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Montering af Velux vinduer</li>
+                        <li>• Inddækning og tætning</li>
+                        <li>• Udskiftning af gamle tagvinduer</li>
+                        <li>• Soløsninger og persienner</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold text-white mb-6 mt-12">Hvorfor vælge os til tagarbejde?</h2>
+            <div class="space-y-6 mb-8">
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-white mb-1">Erfaring siden 2002</h3>
+                        <p class="text-gray-300">20+ års erfaring med tagarbejde sikrer professionel udførelse hver gang.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-white mb-1">Forsikret håndværker</h3>
+                        <p class="text-gray-300">Vi er fuldt forsikret og kan håndtere forsikringssager ved skader.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-white mb-1">Klare priser</h3>
+                        <p class="text-gray-300">Du får altid et fast tilbud inden arbejdet går i gang - ingen overraskelser.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold text-white mb-6 mt-12">Serviceområde</h2>
+            <p class="text-gray-300 mb-6">Vi udfører tagarbejde i hele Fyn-området:</p>
+            <div class="grid sm:grid-cols-2 gap-4 text-gray-300">
+                <ul class="space-y-2">
+                    <li>• Tagarbejde Langeskov</li>
+                    <li>• Nyt tag Odense</li>
+                    <li>• Tagrenovering Kerteminde</li>
+                    <li>• Tag Nyborg</li>
+                </ul>
+                <ul class="space-y-2">
+                    <li>• Tagarbejde Ullerslev</li>
+                    <li>• Tag Munkebo</li>
+                    <li>• Tagarbejde Ørbæk</li>
+                    <li>• Tømrer hele Fyn</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-dark-900 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">Brug for nyt tag?</h2>
+            <p class="text-xl text-gray-300 mb-8">Kontakt os for et gratis og uforpligtende tilbud på tagarbejde</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#kontakt" class="px-8 py-4 bg-accent border-2 border-accent text-white rounded-lg font-semibold bg-accent-hover">Kontakt os</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Component Loader -->
+    <script src="components/loader.js"></script>
+
+</body>
+</html>
+

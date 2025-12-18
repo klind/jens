@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Prevent flicker on page load -->
+    <style>
+        .preload, .preload * {
+            transition: none !important;
+            animation: none !important;
+        }
+    </style>
+    
+    <title>Køkkenmontør Langeskov & Odense | Autoriseret HTH, IKEA, Unoform | Jens Justesen</title>
+    <meta name="description" content="Professionel køkkenmontør i Langeskov og Odense. Autoriseret montør af HTH, IKEA, Unoform, Invita og Svane. 20+ års erfaring. Ring 2856 5867 for gratis tilbud.">
+    
+    <link rel="canonical" href="https://toemrerjustesen.dk/koekkenmontering.html">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Køkkenmontør Langeskov & Odense | Autoriseret HTH, IKEA">
+    <meta property="og:description" content="Professionel køkkenmontør med 20+ års erfaring. Autoriseret montør af alle kendte køkkenmærker på Fyn.">
+    <meta property="og:url" content="https://toemrerjustesen.dk/koekkenmontering.html">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Køkkenmontering",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Tømrerfirmaet Jens Justesen ApS",
+        "telephone": "+4528565867",
+        "email": "jens@toemrerjustesen.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Langeskov",
+          "addressRegion": "Fyn",
+          "addressCountry": "DK"
+        }
+      },
+      "areaServed": ["Langeskov", "Odense", "Kerteminde", "Nyborg", "Ullerslev", "Fyn"],
+      "description": "Professionel køkkenmontør med autorisering til HTH, IKEA, Unoform, Invita og Svane køkkener."
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Forside",
+          "item": "https://toemrerjustesen.dk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Køkkenmontering",
+          "item": "https://toemrerjustesen.dk/koekkenmontering.html"
+        }
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hvilke køkkenmærker monterer I?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vi er autoriserede montører af HTH, Unoform, Invita, Svane, IKEA og mange andre køkkenmærker. Uanset hvilket køkken du har valgt, har vi erfaring med professionel montering."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvor lang tid tager en køkkenmontering?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En typisk køkkenmontering tager 2-5 dage afhængig af køkkenets størrelse og kompleksitet. Vi laver en præcis tidsplan ved tilbudsgivningen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvad koster det at få monteret et køkken?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Prisen varierer efter køkkenets størrelse, type og eventuelle specialarbejder. Kontakt os for et gratis og uforpligtende tilbud baseret på dit specifikke køkken."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dækker I hele Fyn?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, vi dækker hele Fyn inklusiv Langeskov, Odense, Kerteminde, Nyborg, Ullerslev og omegn."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent-main: #10b981;
+            --accent-hover: #34d399;
+            --accent-light: #6ee7b7;
+            --accent-dark: #059669;
+        }
+        .bg-accent { background-color: var(--accent-main); }
+        .bg-accent-hover:hover { background-color: var(--accent-hover); }
+        .text-accent { color: var(--accent-light); }
+        .border-accent { border-color: var(--accent-main); }
+        * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .smooth-scroll { scroll-behavior: smooth; }
+        .btn-primary { transition: all 0.2s ease; }
+        .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+        
+        /* Mobile menu */
+        .mobile-menu {
+            transition: transform 0.3s ease, visibility 0s 0.3s;
+            transform: translateX(100%);
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+            visibility: visible;
+            pointer-events: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        /* Prevent transitions on page load */
+        .preload * {
+            transition: none !important;
+        }
+        
+        /* Hamburger */
+        .hamburger-line {
+            transition: all 0.3s ease;
+        }
+        .hamburger.active .line-1 {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .hamburger.active .line-2 {
+            opacity: 0;
+        }
+        .hamburger.active .line-3 {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: { 950: '#0a0a0b', 900: '#111113', 850: '#1a1a1d', 800: '#1f1f23', 700: '#2a2a2f' },
+                        charcoal: { 700: '#3f3f46', 800: '#27272a', 900: '#18181b' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="preload smooth-scroll bg-dark-900 text-gray-100 antialiased">
+    <script>
+        // Remove preload class after page loads to enable transitions
+        window.addEventListener('load', () => {
+            document.body.classList.remove('preload');
+        });
+        // Fallback - remove after 100ms regardless
+        setTimeout(() => {
+            document.body.classList.remove('preload');
+        }, 100);
+    </script>
+
+    <!-- Header Component -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-dark-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl lg:text-6xl font-bold text-white mb-6">
+                Køkkenmontør i Langeskov & Odense
+            </h1>
+            <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                Autoriseret køkkenmontør med 20+ års erfaring. Vi monterer HTH, IKEA, Unoform, Invita, Svane og alle andre køkkenmærker med professionel præcision.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#kontakt" class="px-8 py-4 bg-accent border-2 border-accent text-white rounded-lg font-semibold bg-accent-hover">Kontakt os</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16 bg-dark-850">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="prose prose-invert prose-lg max-w-none">
+                
+                <h2 class="text-3xl font-bold text-white mb-6">Professionel køkkenmontering på Fyn</h2>
+                
+                <p class="text-gray-300 mb-6">
+                    At få monteret et nyt køkken er en stor investering, og det kræver erfarne hænder for at sikre det perfekte resultat. Som autoriseret køkkenmontør i Langeskov og Odense har vi specialiseret os i professionel køkkenmontering siden 2002. Vi arbejder med alle køkkenmærker og sikrer altid præcis og omhyggelig installation.
+                </p>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Hvilke køkkenmærker monterer vi?</h2>
+                
+                <p class="text-gray-300 mb-6">
+                    Vi er autoriserede montører af de mest populære køkkenmærker i Danmark:
+                </p>
+
+                <ul class="space-y-3 text-gray-300 mb-8">
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span><strong>HTH Køkkener</strong> - Danmarks mest solgte køkkenmærke</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span><strong>IKEA Køkkener</strong> - Moderne design til en god pris</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span><strong>Unoform Køkkener</strong> - Dansk kvalitet og design</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span><strong>Invita Køkkener</strong> - Eksklusive løsninger</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span><strong>Svane Køkkener</strong> - Håndværksmæssig kvalitet</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span><strong>Og mange andre</strong> - Vi monterer alle køkkenmærker</span>
+                    </li>
+                </ul>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Hvad omfatter vores køkkenmontering?</h2>
+                
+                <p class="text-gray-300 mb-6">
+                    Vores komplette køkkenmontering inkluderer alt fra A til Z:
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-dark-900 border border-dark-700 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-white mb-3">Montering</h3>
+                        <ul class="space-y-2 text-gray-300">
+                            <li>✓ Montering af underskabe</li>
+                            <li>✓ Montering af overskabe</li>
+                            <li>✓ Montering af bordplade</li>
+                            <li>✓ Montering af sokkel</li>
+                            <li>✓ Installation af skuffer og beslag</li>
+                        </ul>
+                    </div>
+                    <div class="bg-dark-900 border border-dark-700 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-white mb-3">Installation</h3>
+                        <ul class="space-y-2 text-gray-300">
+                            <li>✓ Tilslutning af vask og armatur</li>
+                            <li>✓ Tilslutning af hvidevarer</li>
+                            <li>✓ Montering af emhætte</li>
+                            <li>✓ Finpudsning og justering</li>
+                            <li>✓ Oprydning efter arbejdet</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Hvorfor vælge os som køkkenmontør?</h2>
+                
+                <div class="space-y-6 mb-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg text-white mb-1">Autoriseret og erfaren</h3>
+                            <p class="text-gray-300">20+ års erfaring med køkkenmontering. Autoriseret hos alle store køkkenleverandører.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg text-white mb-1">Præcise tidsfrister</h3>
+                            <p class="text-gray-300">Vi overholder alle aftaler. Dit køkken bliver færdigt til tiden - garanteret.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg text-white mb-1">Kvalitet i detaljen</h3>
+                            <p class="text-gray-300">Vi er ikke færdige før alle detaljer sidder perfekt. Ingen genveje - kun kvalitet.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg text-white mb-1">Direkte kommunikation</h3>
+                            <p class="text-gray-300">Du kommunikerer direkte med mig - ingen mellemmænd eller misforståelser.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Ofte stillede spørgsmål om køkkenmontering</h2>
+                
+                <div class="space-y-6 mb-8">
+                    <div class="bg-dark-900 border border-dark-700 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-white mb-3">Hvilke køkkenmærker monterer I?</h3>
+                        <p class="text-gray-300">
+                            Vi er autoriserede montører af HTH, Unoform, Invita, Svane, IKEA og mange andre køkkenmærker. Uanset hvilket køkken du har valgt, har vi erfaring med professionel montering.
+                        </p>
+                    </div>
+
+                    <div class="bg-dark-900 border border-dark-700 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-white mb-3">Hvor lang tid tager en køkkenmontering?</h3>
+                        <p class="text-gray-300">
+                            En typisk køkkenmontering tager 2-5 dage afhængig af køkkenets størrelse og kompleksitet. Vi laver en præcis tidsplan ved tilbudsgivningen.
+                        </p>
+                    </div>
+
+                    <div class="bg-dark-900 border border-dark-700 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-white mb-3">Hvad koster det at få monteret et køkken?</h3>
+                        <p class="text-gray-300">
+                            Prisen varierer efter køkkenets størrelse, type og eventuelle specialarbejder. Kontakt os for et gratis og uforpligtende tilbud baseret på dit specifikke køkken.
+                        </p>
+                    </div>
+
+                    <div class="bg-dark-900 border border-dark-700 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-white mb-3">Dækker I hele Fyn?</h3>
+                        <p class="text-gray-300">
+                            Ja, vi dækker hele Fyn inklusiv Langeskov, Odense, Kerteminde, Nyborg, Ullerslev, Munkebo, Ørbæk og omegn.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-bold text-white mb-6 mt-12">Serviceområde</h2>
+                
+                <p class="text-gray-300 mb-6">
+                    Vi tilbyder professionel køkkenmontering i hele Fyn-området. Vores primære serviceområde inkluderer:
+                </p>
+
+                <div class="grid sm:grid-cols-2 gap-4 mb-8 text-gray-300">
+                    <div>
+                        <ul class="space-y-2">
+                            <li>• Køkkenmontør Langeskov</li>
+                            <li>• Køkkenmontør Odense</li>
+                            <li>• Køkkenmontør Kerteminde</li>
+                            <li>• Køkkenmontør Nyborg</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="space-y-2">
+                            <li>• Køkkenmontør Ullerslev</li>
+                            <li>• Køkkenmontør Munkebo</li>
+                            <li>• Køkkenmontør Ørbæk</li>
+                            <li>• Køkkenmontør hele Fyn</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-dark-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+                Klar til dit nye køkken?
+            </h2>
+            <p class="text-xl text-gray-300 mb-8">
+                Kontakt os i dag for et gratis og uforpligtende tilbud på køkkenmontering
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#kontakt" class="px-8 py-4 bg-accent border-2 border-accent text-white rounded-lg font-semibold bg-accent-hover">Kontakt os</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Component Loader -->
+    <script src="components/loader.js"></script>
+
+</body>
+</html>
+

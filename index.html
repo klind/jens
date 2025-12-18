@@ -3,8 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tømrer Jens Justesen | Professionelt Håndværk på Fyn</title>
-    <meta name="description" content="Autoriseret tømrer i Langeskov med speciale i køkkenmontering, vinduer, døre og renovering. Erfaring siden 2002. Dækker hele Fyn.">
+    
+    <!-- Prevent flicker on page load -->
+    <style>
+        .preload, .preload * {
+            transition: none !important;
+            animation: none !important;
+        }
+    </style>
+    
+    <title>Tømrer Langeskov | Køkkenmontør Odense | Jens Justesen</title>
+    <meta name="description" content="Professionel tømrer i Langeskov og Odense. Autoriseret køkkenmontør med 20+ års erfaring. Specialister i vinduer, døre, renovering og tagarbejde. Ring 2856 5867 for gratis tilbud.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://toemrerjustesen.dk/">
+    
+    <!-- Geo-targeting -->
+    <meta name="geo.region" content="DK-83">
+    <meta name="geo.placename" content="Langeskov">
+    <meta name="geo.position" content="55.3577;10.6307">
+    <meta name="ICBM" content="55.3577, 10.6307">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toemrerjustesen.dk/">
+    <meta property="og:title" content="Tømrer Langeskov | Køkkenmontør Odense | Jens Justesen">
+    <meta property="og:description" content="Professionel tømrer i Langeskov og Odense. Autoriseret køkkenmontør med 20+ års erfaring. Ring 2856 5867 for gratis tilbud.">
+    <meta property="og:image" content="https://toemrerjustesen.dk/images/hero-kitchen-1.jpg">
+    <meta property="og:locale" content="da_DK">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://toemrerjustesen.dk/">
+    <meta name="twitter:title" content="Tømrer Langeskov | Køkkenmontør Odense | Jens Justesen">
+    <meta name="twitter:description" content="Professionel tømrer i Langeskov og Odense. Autoriseret køkkenmontør med 20+ års erfaring.">
+    <meta name="twitter:image" content="https://toemrerjustesen.dk/images/hero-kitchen-1.jpg">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://toemrerjustesen.dk/#business",
+          "name": "Tømrerfirmaet Jens Justesen ApS",
+          "image": "https://toemrerjustesen.dk/images/logo.png",
+          "logo": "https://toemrerjustesen.dk/images/logo.png",
+          "description": "Professionel tømrer og køkkenmontør i Langeskov med 20+ års erfaring. Vi tilbyder køkkenmontering, vinduer, døre, renovering, tagarbejde og gulvlægning på hele Fyn.",
+          "url": "https://toemrerjustesen.dk/",
+          "telephone": "+4528565867",
+          "email": "jens@toemrerjustesen.dk",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Langeskov",
+            "addressRegion": "Fyn",
+            "addressCountry": "DK"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 55.3577,
+            "longitude": 10.6307
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Langeskov"
+            },
+            {
+              "@type": "City",
+              "name": "Odense"
+            },
+            {
+              "@type": "City",
+              "name": "Kerteminde"
+            },
+            {
+              "@type": "City",
+              "name": "Nyborg"
+            },
+            {
+              "@type": "City",
+              "name": "Ullerslev"
+            },
+            {
+              "@type": "City",
+              "name": "Munkebo"
+            },
+            {
+              "@type": "City",
+              "name": "Ørbæk"
+            }
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "5",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "07:00",
+              "closes": "16:00"
+            }
+          ],
+          "sameAs": [
+            "https://www.facebook.com/jensjustesentoemrer/"
+          ]
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://toemrerjustesen.dk/#service-koekken",
+          "name": "Køkkenmontering",
+          "description": "Autoriseret montør af HTH, Unoform, Invita, Svane, IKEA og flere. Komplet rådgivning og installation af dit drømmekøkken.",
+          "provider": {
+            "@id": "https://toemrerjustesen.dk/#business"
+          },
+          "areaServed": {
+            "@type": "State",
+            "name": "Fyn"
+          },
+          "serviceType": "Køkkenmontering"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://toemrerjustesen.dk/#service-vinduer",
+          "name": "Vinduer & Døre",
+          "description": "Professionel montering af vinduer og døre. Vi rådgiver om de bedste løsninger fra producenter som STM, Rationel og Velfac.",
+          "provider": {
+            "@id": "https://toemrerjustesen.dk/#business"
+          },
+          "areaServed": {
+            "@type": "State",
+            "name": "Fyn"
+          },
+          "serviceType": "Vinduesmontage"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://toemrerjustesen.dk/#service-renovering",
+          "name": "Renovering & Ombygning",
+          "description": "Fra mindre renoveringer til totalrenoveringer. Vi finder den bedste løsning uden at gå på kompromis med kvaliteten.",
+          "provider": {
+            "@id": "https://toemrerjustesen.dk/#business"
+          },
+          "areaServed": {
+            "@type": "State",
+            "name": "Fyn"
+          },
+          "serviceType": "Renovering"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://toemrerjustesen.dk/#service-tag",
+          "name": "Nyt Tag",
+          "description": "Montering af nyt tag eller tagrenovering. Vi hjælper dig med at finde den rigtige løsning til dit hjem.",
+          "provider": {
+            "@id": "https://toemrerjustesen.dk/#business"
+          },
+          "areaServed": {
+            "@type": "State",
+            "name": "Fyn"
+          },
+          "serviceType": "Tagarbejde"
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://toemrerjustesen.dk/#service-gulv",
+          "name": "Gulvlægning",
+          "description": "Installation af trægulve samt professionel gulvafslibning. Vi sørger for et flot og holdbart resultat.",
+          "provider": {
+            "@id": "https://toemrerjustesen.dk/#business"
+          },
+          "areaServed": {
+            "@type": "State",
+            "name": "Fyn"
+          },
+          "serviceType": "Gulvlægning"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://toemrerjustesen.dk/#organization",
+          "name": "Tømrerfirmaet Jens Justesen ApS",
+          "url": "https://toemrerjustesen.dk/",
+          "logo": "https://toemrerjustesen.dk/images/logo.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+4528565867",
+            "contactType": "customer service",
+            "email": "jens@toemrerjustesen.dk",
+            "areaServed": "DK",
+            "availableLanguage": "Danish"
+          },
+          "sameAs": [
+            "https://www.facebook.com/jensjustesentoemrer/"
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://toemrerjustesen.dk/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Forside",
+              "item": "https://toemrerjustesen.dk/"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,6 +269,11 @@
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
         
+        /* Prevent transitions on page load */
+        .preload * {
+            transition: none !important;
+        }
+        
         /* Hamburger menu animation */
         .hamburger-line {
             transition: all 0.3s ease;
@@ -74,12 +293,17 @@
         
         /* Mobile menu slide */
         .mobile-menu {
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, visibility 0s 0.3s;
             transform: translateX(100%);
+            visibility: hidden;
+            pointer-events: none;
         }
         
         .mobile-menu.active {
             transform: translateX(0);
+            visibility: visible;
+            pointer-events: auto;
+            transition: transform 0.3s ease;
         }
         
         /* Smooth hover transitions */
@@ -174,74 +398,23 @@
         }
     </script>
 </head>
-<body class="smooth-scroll bg-dark-900 text-gray-100 antialiased">
+<body class="preload smooth-scroll bg-dark-900 text-gray-100 antialiased">
+    <script>
+        // Remove preload class after page loads to enable transitions
+        window.addEventListener('load', () => {
+            document.body.classList.remove('preload');
+        });
+        // Fallback - remove after 100ms regardless
+        setTimeout(() => {
+            document.body.classList.remove('preload');
+        }, 100);
+    </script>
 
-    <!-- Header -->
-    <header id="header" class="fixed top-0 left-0 right-0 bg-dark-850 border-b border-dark-700 z-50 transition-shadow duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20 lg:h-24">
-                
-                <!-- Logo -->
-                <a href="#" class="flex items-center space-x-3">
-                    <img src="images/logo.webp" alt="Tømrerfirmaet Jens Justesen" class="h-10 sm:h-12 w-auto">
-                </a>
-
-                <!-- Desktop Navigation -->
-                <nav class="hidden lg:flex items-center space-x-8">
-                    <a href="#hjem" class="text-gray-300 hover:text-white transition-colors font-medium">Forside</a>
-                    <a href="#ydelser" class="text-gray-300 hover:text-white transition-colors font-medium">Ydelser</a>
-                    <a href="#projekter" class="text-gray-300 hover:text-white transition-colors font-medium">Projekter</a>
-                    <a href="#anmeldelser" class="text-gray-300 hover:text-white transition-colors font-medium">Anmeldelser</a>
-                </nav>
-
-                <!-- Desktop CTA -->
-                <div class="hidden lg:flex items-center space-x-4">
-                    <a href="tel:28565867" class="text-gray-300 hover:text-white font-medium">2856 5867</a>
-                    <a href="#kontakt" class="btn-primary px-6 py-2.5 bg-accent border-2 border-accent text-white rounded-lg font-medium bg-accent-hover">
-                        Få tilbud
-                    </a>
-                </div>
-
-                <!-- Mobile Hamburger -->
-                <button id="hamburger" class="lg:hidden hamburger p-2 -mr-2">
-                    <div class="w-6 flex flex-col space-y-1.5">
-                        <span class="hamburger-line line-1 block w-full h-0.5 bg-gray-100"></span>
-                        <span class="hamburger-line line-2 block w-full h-0.5 bg-gray-100"></span>
-                        <span class="hamburger-line line-3 block w-full h-0.5 bg-gray-100"></span>
-                    </div>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu lg:hidden fixed top-0 right-0 bottom-0 w-full sm:w-80 bg-dark-850 shadow-2xl border-l border-dark-700">
-            <div class="flex flex-col h-full">
-                <div class="flex items-center justify-between p-6 border-b border-dark-700">
-                    <span class="font-semibold text-lg text-gray-100">Menu</span>
-                    <button id="close-menu" class="p-2 -mr-2 text-gray-100">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                        </svg>
-                    </button>
-                </div>
-                <nav class="flex flex-col p-6 space-y-6">
-                    <a href="#hjem" class="text-lg font-medium text-gray-100 hover:text-accent mobile-menu-link">Forside</a>
-                    <a href="#ydelser" class="text-lg font-medium text-gray-100 hover:text-accent mobile-menu-link">Ydelser</a>
-                    <a href="#projekter" class="text-lg font-medium text-gray-100 hover:text-accent mobile-menu-link">Projekter</a>
-                    <a href="#anmeldelser" class="text-lg font-medium text-gray-100 hover:text-accent mobile-menu-link">Anmeldelser</a>
-                    <div class="pt-6 border-t border-dark-700">
-                        <a href="tel:28565867" class="block text-lg font-medium text-gray-100 mb-4">📞 2856 5867</a>
-                        <a href="#kontakt" class="block w-full px-6 py-3 bg-accent text-white rounded-lg font-medium text-center mobile-menu-link bg-accent-hover">
-                            Få tilbud
-                        </a>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <!-- Header Component -->
+    <div id="header-placeholder"></div>
 
     <!-- Hero Section -->
-    <section id="hjem" class="relative pt-20 lg:pt-24 min-h-[30vh] lg:min-h-[35vh] flex items-center overflow-hidden">
+    <section id="hjem" class="relative pt-28 lg:pt-32 min-h-[30vh] lg:min-h-[35vh] flex items-center overflow-hidden">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
             <img src="images/hero-kitchen-1.jpg" alt="Professionel køkkenmontering på Fyn" class="w-full h-full object-cover" loading="eager">
@@ -267,7 +440,7 @@
                 
                 <!-- Description -->
                 <p class="text-lg lg:text-xl text-gray-200 mb-10 leading-relaxed max-w-2xl">
-                    Professionel tømrer i Langeskov siden 2002. Vi leverer præcist håndværk til private og erhverv på hele Fyn – fra køkkenmontering til totalrenoveringer.
+                    Professionel tømrer i Langeskov og Odense siden 2002. Certificeret håndværker med speciale i køkkenmontering, vinduer, døre og totalrenoveringer. Vi dækker hele Fyn med præcist håndværk til private og erhverv.
                 </p>
                 
                 <!-- CTAs -->
@@ -313,7 +486,7 @@
                     </div>
                     <div>
                         <div class="font-semibold text-white mb-1">Dækker hele Fyn</div>
-                        <div class="text-sm text-gray-300">Odense, Kerteminde, Nyborg, Ullerslev & omegn</div>
+                        <div class="text-sm text-gray-300">Langeskov, Odense, Kerteminde, Nyborg, Ullerslev, Munkebo, Ørbæk & omegn</div>
                     </div>
                 </div>
             </div>
@@ -345,10 +518,10 @@
                     </div>
                     <h3 class="text-xl font-semibold text-white mb-3">Køkkenmontering</h3>
                     <p class="text-gray-300 mb-4">
-                        Autoriseret montør af HTH, Unoform, Invita, Svane, IKEA og flere. Komplet rådgivning og installation af dit drømmekøkken.
+                        Autoriseret køkkenmontør i Langeskov og Odense. Monterer HTH, Unoform, Invita, Svane, IKEA og flere. Komplet rådgivning og professionel installation af dit drømmekøkken på hele Fyn.
                     </p>
-                    <a href="#kontakt" class="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
-                        Kontakt os
+                    <a href="koekkenmontering.html" class="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
+                        Læs mere
                         <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
@@ -364,10 +537,10 @@
                     </div>
                     <h3 class="text-xl font-semibold text-white mb-3">Vinduer & Døre</h3>
                     <p class="text-gray-300 mb-4">
-                        Professionel montering af vinduer og døre. Vi rådgiver om de bedste løsninger fra producenter som STM, Rationel og Velfac.
+                        Professionel montering af vinduer og døre i Odense-området. Vi rådgiver om de bedste løsninger fra producenter som STM, Rationel og Velfac. Erfaren tømrer på Fyn.
                     </p>
-                    <a href="#kontakt" class="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
-                        Kontakt os
+                    <a href="vinduer-doere.html" class="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
+                        Læs mere
                         <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
@@ -383,10 +556,10 @@
                     </div>
                     <h3 class="text-xl font-semibold text-white mb-3">Renovering & Ombygning</h3>
                     <p class="text-gray-300 mb-4">
-                        Fra mindre renoveringer til totalrenoveringer. Vi finder den bedste løsning uden at gå på kompromis med kvaliteten.
+                        Totalrenovering og ombygning i Langeskov, Odense og hele Fyn. Fra mindre renoveringsprojekter til større ombygninger. Erfaren håndværker finder den bedste løsning uden kompromis på kvaliteten.
                     </p>
-                    <a href="#kontakt" class="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
-                        Kontakt os
+                    <a href="renovering-ombygning.html" class="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
+                        Læs mere
                         <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
@@ -402,10 +575,10 @@
                     </div>
                     <h3 class="text-xl font-semibold text-white mb-3">Nyt Tag</h3>
                     <p class="text-gray-300 mb-4">
-                        Montering af nyt tag eller tagrenovering. Vi hjælper dig med at finde den rigtige løsning til dit hjem.
+                        Tagarbejde og tagrenovering på Fyn. Montering af nyt tag til private og erhverv i Odense-området. Erfaren tømrer hjælper dig med at finde den rigtige løsning til dit hjem.
                     </p>
-                    <a href="#kontakt" class="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
-                        Kontakt os
+                    <a href="tag-tagarbejde.html" class="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
+                        Læs mere
                         <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
@@ -421,10 +594,10 @@
                     </div>
                     <h3 class="text-xl font-semibold text-white mb-3">Gulvlægning</h3>
                     <p class="text-gray-300 mb-4">
-                        Installation af trægulve samt professionel gulvafslibning. Vi sørger for et flot og holdbart resultat.
+                        Gulvlægning i Odense og omegn. Professionel installation af trægulve samt gulvafslibning på hele Fyn. Erfaren tømrer sikrer flot og holdbart resultat med kvalitetshåndværk.
                     </p>
-                    <a href="#kontakt" class="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
-                        Kontakt os
+                    <a href="gulvlaegning.html" class="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
+                        Læs mere
                         <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
@@ -442,8 +615,8 @@
                     <p class="text-gray-300 mb-4">
                         Ingen opgave er for stor eller lille. Kontakt os for rådgivning – vi finder altid en løsning.
                     </p>
-                    <a href="#kontakt" class="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
-                        Kontakt os
+                    <a href="terrasse-udestue.html" class="inline-flex items-center text-accent font-medium hover:gap-2 transition-all">
+                        Læs mere
                         <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
@@ -462,10 +635,10 @@
                 <!-- Content -->
                 <div>
                     <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
-                        Hvorfor vælge os?
+                        Hvorfor vælge os som din tømrer på Fyn?
                     </h2>
                     <p class="text-lg text-gray-300 mb-8">
-                        Hos Tømrerfirmaet Jens Justesen sætter vi kunden i centrum. Vi er med hele vejen fra start til slut og sikrer klar kommunikation gennem hele forløbet.
+                        Hos Tømrerfirmaet Jens Justesen i Langeskov sætter vi kunden i centrum. Som certificeret håndværker med 20+ års erfaring er vi med hele vejen fra start til slut og sikrer klar kommunikation gennem hele forløbet.
                     </p>
                     
                     <div class="space-y-6">
@@ -476,8 +649,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-semibold text-lg text-white mb-1">Tæt dialog med tømrermesteren</h3>
-                                <p class="text-gray-300">Du kommunikerer direkte med mig gennem hele projektet – ingen mellemmænd.</p>
+                                <h3 class="font-semibold text-lg text-white mb-1">Certificeret tømrermester</h3>
+                                <p class="text-gray-300">Du kommunikerer direkte med mig gennem hele projektet – ingen mellemmænd. Autoriseret og forsikret håndværker.</p>
                             </div>
                         </div>
 
@@ -636,11 +809,11 @@
                         </svg>
                     </div>
                     <p class="text-gray-300 mb-6 leading-relaxed">
-                        "Når jeg sælger køkken, bad og garderobe, har jeg ofte brugt Jens som montør. Det er en stor fornøjelse at have ham på mine sager, tingene bliver udført præcist og med fokus på detaljer."
+                        "Når jeg sælger køkken, bad og garderobe, har jeg ofte brugt Jens som montør. Det er en stor fornøjelse at have ham på mine sager, tingene bliver udført præcist og med fokus på detaljer, som sikre høj tilfredshed hos kunderne."
                     </p>
                     <div>
                         <div class="font-semibold text-white">Jakob Baunsgaard Nielsen</div>
-                        <div class="text-sm text-gray-400">Erhvervskonsulent, HTH Håndværkssalg</div>
+                        <div class="text-sm text-gray-400">Erhvervskonsulent, HTH Håndværkssalg, Odense</div>
                     </div>
                 </div>
 
@@ -757,8 +930,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <div class="text-sm font-medium text-gray-400 mb-1">Område</div>
-                                <div class="text-lg text-gray-200">Langeskov, Odense, Kerteminde, Nyborg, Ullerslev & hele Fyn</div>
+                                <div class="text-sm font-medium text-gray-400 mb-1">Serviceområde - Tømrer på Fyn</div>
+                                <div class="text-lg text-gray-200">Langeskov, Odense, Kerteminde, Nyborg, Ullerslev, Munkebo, Ørbæk & hele Fyn</div>
                             </div>
                         </div>
 
@@ -768,9 +941,13 @@
                     <div class="pt-8 border-t border-dark-700">
                         <h3 class="font-semibold text-white mb-4">Tømrerfirmaet Jens Justesen ApS</h3>
                         <div class="space-y-2 text-gray-300">
-                            <p>CVR: [Insert CVR]</p>
+                            <p>Vandværksvej 22</p>
+                            <p>5550 Langeskov</p>
+                            <p>CVR: 40180028</p>
                             <p>Erfaring siden 2002</p>
-                            <p>Autoriseret køkkenmontør</p>
+                            <p>✓ Autoriseret køkkenmontør</p>
+                            <p>✓ Certificeret håndværker</p>
+                            <p>✓ Forsikret tømrerfirma</p>
                         </div>
                     </div>
                 </div>
@@ -794,7 +971,7 @@
                         </div>
 
                         <div>
-                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
+                            <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">
                                 Telefon *
                             </label>
                             <input 
@@ -808,7 +985,7 @@
                         </div>
 
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">
                                 Email (valgfri)
                             </label>
                             <input 
@@ -821,14 +998,14 @@
                         </div>
 
                         <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">
                                 Besked (valgfri)
                             </label>
                             <textarea 
                                 id="message" 
                                 name="message" 
                                 rows="4"
-                                class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-charcoal-800 focus:border-transparent outline-none transition-all resize-none"
+                                class="w-full px-4 py-3 bg-dark-900 border border-dark-700 text-gray-100 rounded-lg focus:ring-2 ring-accent focus:border-transparent outline-none transition-all resize-none placeholder:text-gray-500"
                                 placeholder="Fortæl kort om dit projekt..."
                             ></textarea>
                         </div>
@@ -851,157 +1028,11 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-charcoal-900 text-white py-12 lg:py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
-                
-                <!-- Company Info -->
-                <div class="lg:col-span-2">
-                    <div class="mb-6">
-                        <img src="images/logo.webp" alt="Tømrerfirmaet Jens Justesen" class="h-12 w-auto mb-2">
-                    </div>
-                    <p class="text-gray-300 mb-6 max-w-md">
-                        Professionelt tømrer- og snedkerarbejde på Fyn siden 2002. Specialister i køkkenmontering, vinduer, døre og totalrenoveringer.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/jensjustesentoemrer/" target="_blank" rel="noopener" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
 
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="font-semibold text-lg mb-4">Hurtige links</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#hjem" class="text-gray-300 hover:text-white transition-colors">Forside</a></li>
-                        <li><a href="#ydelser" class="text-gray-300 hover:text-white transition-colors">Ydelser</a></li>
-                        <li><a href="#projekter" class="text-gray-300 hover:text-white transition-colors">Projekter</a></li>
-                        <li><a href="#anmeldelser" class="text-gray-300 hover:text-white transition-colors">Anmeldelser</a></li>
-                        <li><a href="#kontakt" class="text-gray-300 hover:text-white transition-colors">Kontakt</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Info -->
-                <div>
-                    <h3 class="font-semibold text-lg mb-4">Kontakt</h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li>
-                            <a href="tel:28565867" class="hover:text-white transition-colors">
-                                📞 2856 5867
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:jens@toemrerjustesen.dk" class="hover:text-white transition-colors break-all">
-                                ✉️ jens@toemrerjustesen.dk
-                            </a>
-                        </li>
-                        <li class="pt-2">
-                            📍 Dækker hele Fyn
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <!-- Bottom Bar -->
-            <div class="pt-8 border-t border-white/10">
-                <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-                    <div class="text-sm text-gray-400">
-                        © 2024 Tømrerfirmaet Jens Justesen ApS. Alle rettigheder forbeholdes.
-                    </div>
-                    <div class="flex space-x-6 text-sm text-gray-400">
-                        <a href="#" class="hover:text-white transition-colors">Privatlivspolitik</a>
-                        <a href="#" class="hover:text-white transition-colors">Cookiepolitik</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script>
-        // Header shadow on scroll
-        const header = document.getElementById('header');
-        let lastScroll = 0;
-
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > 50) {
-                header.classList.add('header-shadow');
-            } else {
-                header.classList.remove('header-shadow');
-            }
-            
-            lastScroll = currentScroll;
-        });
-
-        // Mobile menu toggle
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const closeMenu = document.getElementById('close-menu');
-        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
-
-        function openMobileMenu() {
-            mobileMenu.classList.add('active');
-            hamburger.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeMobileMenu() {
-            mobileMenu.classList.remove('active');
-            hamburger.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        hamburger.addEventListener('click', openMobileMenu);
-        closeMenu.addEventListener('click', closeMobileMenu);
-        
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', closeMobileMenu);
-        });
-
-        // Close mobile menu on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-                closeMobileMenu();
-            }
-        });
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        const offsetTop = target.offsetTop - 80;
-                        window.scrollTo({
-                            top: offsetTop,
-                            behavior: 'smooth'
-                        });
-                    }
-                }
-            });
-        });
-
-        // Form submission (placeholder - integrate with actual backend)
-        const forms = document.querySelectorAll('form');
-        forms.forEach(form => {
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert('Tak for din henvendelse! Vi kontakter dig hurtigst muligt.');
-                form.reset();
-            });
-        });
-    </script>
+    <!-- Component Loader -->
+    <script src="components/loader.js"></script>
 
 </body>
 </html>

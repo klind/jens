@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Prevent flicker on page load -->
+    <style>
+        .preload, .preload * {
+            transition: none !important;
+            animation: none !important;
+        }
+    </style>
+    
+    <title>Vinduer & Døre Odense | Tømrer Langeskov | STM, Rationel, Velfac | Jens Justesen</title>
+    <meta name="description" content="Professionel montering af vinduer og døre i Odense og på Fyn. Erfaren tømrer monterer STM, Rationel og Velfac. 20+ års erfaring. Ring 2856 5867 for tilbud.">
+    <link rel="canonical" href="https://toemrerjustesen.dk/vinduer-doere.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Vinduesmontage",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Tømrerfirmaet Jens Justesen ApS",
+        "telephone": "+4528565867"
+      },
+      "areaServed": ["Langeskov", "Odense", "Kerteminde", "Nyborg", "Ullerslev", "Fyn"]
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --accent-main: #10b981; --accent-hover: #34d399; }
+        .bg-accent { background-color: var(--accent-main); }
+        .bg-accent-hover:hover { background-color: var(--accent-hover); }
+        .text-accent { color: #6ee7b7; }
+        * { font-family: 'Inter', sans-serif; }
+        .btn-primary { transition: all 0.2s ease; }
+        .btn-primary:hover { transform: translateY(-1px); }
+        
+        /* Mobile menu */
+        .mobile-menu {
+            transition: transform 0.3s ease, visibility 0s 0.3s;
+            transform: translateX(100%);
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .mobile-menu.active {
+            transform: translateX(0);
+            visibility: visible;
+            pointer-events: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        /* Prevent transitions on page load */
+        .preload * {
+            transition: none !important;
+        }
+        
+        /* Hamburger */
+        .hamburger-line { transition: all 0.3s ease; }
+        .hamburger.active .line-1 { transform: translateY(8px) rotate(45deg); }
+        .hamburger.active .line-2 { opacity: 0; }
+        .hamburger.active .line-3 { transform: translateY(-8px) rotate(-45deg); }
+    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { dark: { 950: '#0a0a0b', 900: '#111113', 850: '#1a1a1d', 700: '#2a2a2f' }, charcoal: { 900: '#18181b' } }}}}
+    </script>
+</head>
+<body class="preload bg-dark-900 text-gray-100">
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.remove('preload');
+        });
+        setTimeout(() => {
+            document.body.classList.remove('preload');
+        }, 100);
+    </script>
+    <!-- Header Component -->
+    <div id="header-placeholder"></div>
+
+    <section class="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-dark-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl lg:text-6xl font-bold text-white mb-6">Vinduer & Døre i Odense og på Fyn</h1>
+            <p class="text-xl text-gray-300 mb-8">Professionel montering af vinduer og døre. Erfaren tømrer med speciale i STM, Rationel og Velfac.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#kontakt" class="px-8 py-4 bg-accent border-2 border-accent text-white rounded-lg font-semibold bg-accent-hover">Kontakt os</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-dark-850">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-white mb-6">Erfaren tømrer monterer vinduer og døre på Fyn</h2>
+            <p class="text-gray-300 mb-6">
+                Udskiftning af vinduer og døre kræver præcision og erfaring. Som professionel tømrer i Langeskov og Odense har vi monteret vinduer og døre i over 20 år. Vi arbejder med alle de førende producenter og sikrer en perfekt montering hver gang.
+            </p>
+
+            <h2 class="text-3xl font-bold text-white mb-6 mt-12">Vindues- og døreleverandører</h2>
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="bg-dark-900 border border-dark-700 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-white mb-3">STM</h3>
+                    <p class="text-gray-300">Dansk kvalitet med fokus på energibesparelse og design.</p>
+                </div>
+                <div class="bg-dark-900 border border-dark-700 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-white mb-3">Rationel</h3>
+                    <p class="text-gray-300">Premium vinduer med topmoderne teknologi.</p>
+                </div>
+                <div class="bg-dark-900 border border-dark-700 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold text-white mb-3">Velfac</h3>
+                    <p class="text-gray-300">Kendt for deres holdbarhed og minimalistiske design.</p>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold text-white mb-6 mt-12">Vores ydelser</h2>
+            <ul class="space-y-3 text-gray-300 mb-8">
+                <li class="flex items-start">
+                    <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Udskiftning af vinduer - énlags, trelags eller specialvinduer</span>
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Montering af yderdøre, indvendige døre og terrassedøre</span>
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Fugning og tætning for optimal isolering</span>
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Rådgivning om valg af vinduer og døre</span>
+                </li>
+                <li class="flex items-start">
+                    <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Håndtering af forsikringssager ved renovering</span>
+                </li>
+            </ul>
+
+            <h2 class="text-3xl font-bold text-white mb-6 mt-12">Serviceområde</h2>
+            <p class="text-gray-300 mb-6">Vi monterer vinduer og døre i hele Fyn-området:</p>
+            <div class="grid sm:grid-cols-2 gap-4 text-gray-300">
+                <ul class="space-y-2">
+                    <li>• Vinduer og døre Langeskov</li>
+                    <li>• Vinduer og døre Odense</li>
+                    <li>• Vinduer og døre Kerteminde</li>
+                    <li>• Vinduer og døre Nyborg</li>
+                </ul>
+                <ul class="space-y-2">
+                    <li>• Vinduer og døre Ullerslev</li>
+                    <li>• Vinduer og døre Munkebo</li>
+                    <li>• Vinduer og døre Ørbæk</li>
+                    <li>• Vinduer og døre hele Fyn</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-dark-900 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">Klar til nye vinduer eller døre?</h2>
+            <p class="text-xl text-gray-300 mb-8">Kontakt os for et gratis og uforpligtende tilbud</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#kontakt" class="px-8 py-4 bg-accent border-2 border-accent text-white rounded-lg font-semibold bg-accent-hover">Kontakt os</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Component Loader -->
+    <script src="components/loader.js"></script>
+
+</body>
+</html>
+
