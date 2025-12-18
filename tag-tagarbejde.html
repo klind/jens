@@ -23,7 +23,16 @@
       "provider": {
         "@type": "LocalBusiness",
         "name": "Tømrerfirmaet Jens Justesen ApS",
-        "telephone": "+4528565867"
+        "telephone": "+4528565867",
+        "email": "jens@toemrerjustesen.dk",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Vandværksvej 22",
+          "addressLocality": "Langeskov",
+          "postalCode": "5550",
+          "addressRegion": "Fyn",
+          "addressCountry": "DK"
+        }
       },
       "areaServed": ["Langeskov", "Odense", "Kerteminde", "Nyborg", "Ullerslev", "Fyn"]
     }
@@ -81,7 +90,7 @@
     <div id="header-placeholder"></div>
 
     <section class="pt-32 pb-16 lg:pt-40 lg:pb-24 ">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl lg:text-6xl font-bold text-white mb-6">Tagarbejde og Nyt Tag på Fyn</h1>
             <p class="text-xl text-gray-300 mb-8">Professionel montering af nyt tag og tagrenovering i Odense, Langeskov og hele Fyn. Erfaren tømrer med 20+ års erfaring.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -91,7 +100,7 @@
     </section>
 
     <section class="py-16 ">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-bold text-white mb-6">Erfaren tømrer til tagarbejde på Fyn</h2>
             <p class="text-gray-300 mb-6">
                 Dit tag er en af de vigtigste dele af dit hus. Som erfaren tømrer i Langeskov og Odense har vi specialiseret os i tagarbejde - fra montering af nyt tag til tagrenovering og reparation af tagkonstruktioner. Vi sikrer at dit tag bliver monteret korrekt og holder i mange år fremover.
@@ -99,36 +108,36 @@
 
             <h2 class="text-3xl font-bold text-white mb-6 mt-12">Vores tagydelser</h2>
             <div class="grid md:grid-cols-2 gap-6 mb-8">
-                <div class=" border border-white/10 rounded-lg p-6">
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 text-left">
                     <h3 class="text-xl font-semibold text-white mb-3">Nyt tag</h3>
-                    <ul class="space-y-2 text-gray-300">
+                    <ul class="space-y-2 text-gray-300 inline-block text-left">
                         <li>• Montering af tagkonstruktion</li>
                         <li>• Tagpap og undertag</li>
                         <li>• Montering af tegl eller eternit</li>
                         <li>• Rådgivning om tagmaterialer</li>
                     </ul>
                 </div>
-                <div class=" border border-white/10 rounded-lg p-6">
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 text-left">
                     <h3 class="text-xl font-semibold text-white mb-3">Tagrenovering</h3>
-                    <ul class="space-y-2 text-gray-300">
+                    <ul class="space-y-2 text-gray-300 inline-block text-left">
                         <li>• Udskiftning af gamle tage</li>
                         <li>• Forbedret isolering</li>
                         <li>• Renovering af tagkonstruktion</li>
                         <li>• Håndtering af forsikringssager</li>
                     </ul>
                 </div>
-                <div class=" border border-white/10 rounded-lg p-6">
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 text-left">
                     <h3 class="text-xl font-semibold text-white mb-3">Tagreparation</h3>
-                    <ul class="space-y-2 text-gray-300">
+                    <ul class="space-y-2 text-gray-300 inline-block text-left">
                         <li>• Akut tagreparation</li>
                         <li>• Udskiftning af tagsten</li>
                         <li>• Reparation af lækage</li>
                         <li>• Fugning og tætning</li>
                     </ul>
                 </div>
-                <div class=" border border-white/10 rounded-lg p-6">
+                <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6 text-left">
                     <h3 class="text-xl font-semibold text-white mb-3">Tagvinduer</h3>
-                    <ul class="space-y-2 text-gray-300">
+                    <ul class="space-y-2 text-gray-300 inline-block text-left">
                         <li>• Montering af Velux vinduer</li>
                         <li>• Inddækning og tætning</li>
                         <li>• Udskiftning af gamle tagvinduer</li>
@@ -138,7 +147,7 @@
             </div>
 
             <h2 class="text-3xl font-bold text-white mb-6 mt-12">Hvorfor vælge os til tagarbejde?</h2>
-            <div class="space-y-6 mb-8">
+            <div class="space-y-6 mb-8 inline-block text-left">
                 <div class="flex items-start space-x-4">
                     <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
                         <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -176,25 +185,29 @@
 
             <h2 class="text-3xl font-bold text-white mb-6 mt-12">Serviceområde</h2>
             <p class="text-gray-300 mb-6">Vi udfører tagarbejde i hele Fyn-området:</p>
-            <div class="grid sm:grid-cols-2 gap-4 text-gray-300">
-                <ul class="space-y-2">
+            <div class="grid sm:grid-cols-2 gap-4 text-gray-300 max-w-2xl mx-auto">
+                <div class="text-center">
+                <ul class="space-y-2 inline-block text-left">
                     <li>• Tagarbejde Langeskov</li>
                     <li>• Nyt tag Odense</li>
                     <li>• Tagrenovering Kerteminde</li>
                     <li>• Tag Nyborg</li>
                 </ul>
-                <ul class="space-y-2">
+                </div>
+                <div class="text-center">
+                <ul class="space-y-2 inline-block text-left">
                     <li>• Tagarbejde Ullerslev</li>
                     <li>• Tag Munkebo</li>
                     <li>• Tagarbejde Ørbæk</li>
                     <li>• Tømrer hele Fyn</li>
                 </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="py-16  text-center">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">Brug for nyt tag?</h2>
             <p class="text-xl text-gray-300 mb-8">Kontakt os for et gratis og uforpligtende tilbud på tagarbejde</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
